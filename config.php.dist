@@ -1,0 +1,7 @@
+<?php
+
+class Config
+{
+    public const CALLBACK_API_CONFIRMATION_TOKEN = '';
+    public const VK_API_ACCESS_TOKEN = '';
+}
