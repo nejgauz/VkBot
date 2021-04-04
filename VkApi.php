@@ -14,7 +14,7 @@ class VkApi
     public static function sendMessage(int $userId, string $message)
     {
         return self::callVk('messages.send', [
-            'user_id' => $userId,
+            'peer_id' => $userId,
             'message' => $message
         ]);
     }
