@@ -21,7 +21,7 @@ class VkApi
 
     private static function callVk(string $method, array $params)
     {
-        $params['access_token'] = Config::VK_API_ACCESS_TOKEN;
+        $params['access_token'] = Config::getVkApiAccessToken();
         $params['v'] = self::VK_API_VERSION;
 
         $query = http_build_query($params);
