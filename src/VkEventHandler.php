@@ -16,7 +16,7 @@ class VkEventHandler
             exit();
         }
 
-        if (!is_string($event['group_id'])) {
+        if (($event['group_id']) !== (string)getenv('GROUP_ID')) {
             exit();
         }
 
