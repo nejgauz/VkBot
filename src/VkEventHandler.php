@@ -3,10 +3,6 @@
 namespace App;
 
 
-use App\Bot;
-use App\Config;
-use App\Logger;
-
 class VkEventHandler
 {
     const CALLBACK_API_EVENT_CONFIRMATION = 'confirmation';
@@ -19,7 +15,6 @@ class VkEventHandler
         switch ($event['type']) {
             //Подтверждение сервера
             case self::CALLBACK_API_EVENT_CONFIRMATION:
-                Logger::writeLog('запрос подтверждения');
                 echo Config::getCallbackApiConfirmationToken();
                 exit();
 

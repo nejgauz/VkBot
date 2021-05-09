@@ -3,9 +3,6 @@
 namespace App;
 
 
-use App\Config;
-use App\Logger;
-
 class VkApi
 {
     const VK_API_VERSION = '5.67';
@@ -40,7 +37,6 @@ class VkApi
         $response = json_decode($json, true)['response'] ?? false;
 
         if (!$response) {
-            Logger::writeLog('Не удалось подключиться к вк ');
             exit();
         }
 
