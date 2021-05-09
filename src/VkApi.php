@@ -1,5 +1,10 @@
 <?php
 
+namespace App;
+
+
+use App\Config;
+use App\Logger;
 
 class VkApi
 {

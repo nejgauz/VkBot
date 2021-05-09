@@ -1,5 +1,11 @@
 <?php
 
+namespace App;
+
+
+use App\Bot;
+use App\Config;
+use App\Logger;
 
 class VkEventHandler
 {

@@ -1,0 +1,17 @@
+{
+  "name": "vk/bot",
+  "description": "vk bot",
+  "type": "project",
+  "authors": [
+    {
+      "name": "анна",
+      "email": "shesterikofff@mail.ru"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  }
+}
