@@ -12,6 +12,10 @@ class VkEventHandler
     {
         $event = json_decode(file_get_contents('php://input'), true);
 
+        if (!isset($event['group_id'])) {
+            exit();
+        }
+
         switch ($event['type']) {
             //Подтверждение сервера
             case self::CALLBACK_API_EVENT_CONFIRMATION:
