@@ -12,9 +12,11 @@ class VkEventHandler
     {
         $event = json_decode(file_get_contents('php://input'), true);
 
-        echo getenv('GROUP_ID');
-
         if (!isset($event['group_id'])) {
+            exit();
+        }
+
+        if ($event['group_id'] != getenv('GROUP_ID')) {
             exit();
         }
 
