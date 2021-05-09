@@ -13,6 +13,7 @@ class VkEventHandler
         switch ($event['type']) {
             //Подтверждение сервера
             case self::CALLBACK_API_EVENT_CONFIRMATION:
+                Logger::writeLog('запрос подтверждения');
                 echo Config::getCallbackApiConfirmationToken();
                 exit();
 
