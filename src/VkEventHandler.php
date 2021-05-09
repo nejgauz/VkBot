@@ -12,11 +12,11 @@ class VkEventHandler
     {
         $event = json_decode(file_get_contents('php://input'), true);
 
+        echo getenv('GROUP_ID');
+
         if (!isset($event['group_id'])) {
             exit();
         }
-
-        echo getenv('GROUP_ID');
 
         switch ($event['type']) {
             //Подтверждение сервера
