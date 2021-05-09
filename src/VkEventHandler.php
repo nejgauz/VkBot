@@ -16,6 +16,8 @@ class VkEventHandler
             exit();
         }
 
+        echo getenv('GROUP_ID');
+
         switch ($event['type']) {
             //Подтверждение сервера
             case self::CALLBACK_API_EVENT_CONFIRMATION:
