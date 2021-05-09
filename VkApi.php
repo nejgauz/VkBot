@@ -35,6 +35,7 @@ class VkApi
         $response = json_decode($json, true)['response'] ?? false;
 
         if (!$response) {
+            Logger::writeLog('Не удалось подключиться к вк ');
             exit();
         }
 

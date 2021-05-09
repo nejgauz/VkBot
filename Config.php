@@ -5,12 +5,20 @@ class Config
 {
     public static function getCallbackApiConfirmationToken(): ?string
     {
-        return getenv('CALLBACK_API_CONFIRMATION_TOKEN');
+        $token = getenv('CALLBACK_API_CONFIRMATION_TOKEN');
+        if (!$token) {
+           Logger::writeLog('Не найден confirmation токен в переменных окружения');
+        }
+        return $token;
     }
 
     public static function getVkApiAccessToken(): ?string
     {
-       return getenv('VK_API_ACCESS_TOKEN');
+        $token = getenv('VK_API_ACCESS_TOKEN');
+        if (!$token) {
+            Logger::writeLog('Не найден access токен в переменных окружения');
+        }
+        return $token;
     }
 
 }
