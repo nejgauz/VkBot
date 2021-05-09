@@ -16,7 +16,7 @@ class VkEventHandler
             exit();
         }
 
-        if (!is_int($event['group_id'])) {
+        if (!is_string($event['group_id'])) {
             exit();
         }
 
